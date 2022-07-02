@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MovieFragment">
+
+    <ScrollView
+       android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0C0C0C">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0C0C0C"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+
+            <TextView
+                android:id="@+id/txt_error_popular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Connection Problem!!"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_popular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:textColor="#FFC107"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_movie_list1"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="4dp"
+                android:background="#0C0C0C"
+                android:scrollbars="horizontal">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/txt_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top Rated"
+                android:textColor="#FFC107"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_movie_list2"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_margin="4dp"
+                android:background="#0E0E0E"
+                android:scrollbars="horizontal">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="93dp"
+        android:layout_height="103dp"
+        android:layout_gravity="center" />
+</FrameLayout>
