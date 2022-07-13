@@ -20,11 +20,11 @@ class MoviesRepository @Inject constructor(
         return Pager(
             config = PagingConfig(
                 pageSize = PAGE_SIZE, // required
-                prefetchDistance = PAGE_SIZE, // default: pageSize
-                enablePlaceholders = true, // default: true
-                initialLoadSize = PAGE_SIZE * 3, // default: pageSize * 3
-                maxSize = PagingConfig.MAX_SIZE_UNBOUNDED, // default: Int.MAX_VALUE
-               jumpThreshold = 0 // default: Int.MIN_VALE
+           //     prefetchDistance = PAGE_SIZE, // default: pageSize
+           //     enablePlaceholders = true, // default: true
+            //    initialLoadSize = PAGE_SIZE * 3, // default: pageSize * 3
+            //    maxSize = PagingConfig.MAX_SIZE_UNBOUNDED, // default: Int.MAX_VALUE
+             //  jumpThreshold = 0 // default: Int.MIN_VALE
             ),
             remoteMediator = MoviesRemoteMediator(
                 api, db, type_movie, type, null
