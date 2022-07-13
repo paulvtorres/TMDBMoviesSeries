@@ -15,18 +15,12 @@ class DetailsViewModel @Inject constructor(
     private val repository: MoviesRepository
 ) : ViewModel() {
 
-    //val moviesDetailsModel = MutableLiveData<MoviesDetailsModel>()
     val moviesDetailsModel = MutableLiveData<MoviesEntity>()
 
     fun getMovie(type: String, id: Int) {
         viewModelScope.launch {
             val result = repository.getMovie(type, id)
-
-            //    //  if(!result.isNullOrEmpty()){
-            //   //moviesDetailsModel.postValue(result[0])
             moviesDetailsModel.postValue(result)
-
-            //  // isLoading.postValue(false)
         }
 
     }

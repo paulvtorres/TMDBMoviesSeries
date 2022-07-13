@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.paultorres.movies.R
 import com.paultorres.movies.model.local.MoviesEntity
 import com.paultorres.movies.databinding.FragmentSerieBinding
+import com.paultorres.movies.util.SERIE_TYPE
 import com.paultorres.movies.viewmodel.Adapter.SerieAdapter
 import com.paultorres.movies.viewmodel.SerieViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -107,7 +108,7 @@ class SerieFragment : Fragment(R.layout.fragment_serie) {
 
 
     private fun onItemSelected(it: MoviesEntity) {
-        val action = SerieFragmentDirections.actionNavSerieToNavDetails("tv", it.id)
+        val action = SerieFragmentDirections.actionNavSerieToNavDetails(SERIE_TYPE, it.id)
         findNavController().navigate(action)
     }
 

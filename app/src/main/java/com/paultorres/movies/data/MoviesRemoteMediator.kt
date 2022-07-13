@@ -10,7 +10,6 @@ import com.paultorres.movies.model.api.toMoviesEntity
 import com.paultorres.movies.data.local.MoviesDatabase
 import com.paultorres.movies.model.local.MoviesEntity
 
-//@OptIn(ExperimentalPagingApi::class)
 @ExperimentalPagingApi
 class MoviesRemoteMediator
     (
@@ -46,7 +45,7 @@ class MoviesRemoteMediator
         }
 
         try {
-            //val response = api.getAllMovies(type_movie,type,           page)
+
             val response = if (query != null) api.getSearchMovies(
                 type_movie,
                 query, page

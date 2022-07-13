@@ -16,6 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.paultorres.movies.R
 import com.paultorres.movies.model.local.MoviesEntity
 import com.paultorres.movies.databinding.FragmentSearchMovieBinding
+import com.paultorres.movies.util.MOVIE_TYPE
 import com.paultorres.movies.viewmodel.Adapter.SearchMovieAdapter
 import com.paultorres.movies.viewmodel.SearchMovieViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -88,7 +89,7 @@ class SearchMovieFragment : Fragment(R.layout.fragment_search_movie) {
     }
 
     private fun onItemSelected(it: MoviesEntity) {
-        val action = SearchMovieFragmentDirections.actionNavSearchmovieToNavDetails("movie", it.id)
+        val action = SearchMovieFragmentDirections.actionNavSearchmovieToNavDetails(MOVIE_TYPE, it.id)
         findNavController().navigate(action)
     }
 

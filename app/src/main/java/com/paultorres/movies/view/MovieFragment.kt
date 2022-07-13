@@ -18,6 +18,7 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.paultorres.movies.model.local.MoviesEntity
+import com.paultorres.movies.util.MOVIE_TYPE
 import com.paultorres.movies.viewmodel.Adapter.MovieAdapter
 import com.paultorres.movies.viewmodel.MovieViewModel
 import kotlinx.coroutines.flow.collectLatest
@@ -101,7 +102,7 @@ class MovieFragment : Fragment(R.layout.fragment_movie) {
     }
 
     private fun onItemSelected(it: MoviesEntity) {
-        val action = MovieFragmentDirections.actionNavMovieToNavDetails("movie", it.id)
+        val action = MovieFragmentDirections.actionNavMovieToNavDetails(MOVIE_TYPE, it.id)
         findNavController().navigate(action)
     }
 

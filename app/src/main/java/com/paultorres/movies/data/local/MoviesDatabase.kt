@@ -8,6 +8,5 @@ import com.paultorres.movies.model.local.MoviesEntity
 abstract class MoviesDatabase : RoomDatabase() {
 
     abstract fun moviesDBInterface(): MoviesDBInterface
-
 }
 

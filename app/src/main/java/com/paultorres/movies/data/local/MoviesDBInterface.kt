@@ -20,6 +20,9 @@ interface MoviesDBInterface {
     @Query("select * from movie_table WHERE movie_type = :movie_type AND id = :id")
     suspend fun getSearchMovie(movie_type: String, id: Int): MoviesEntity
 
+    @Query("select * from movie_table WHERE movie_type = :movie_type AND type = :type order by id asc")
+    suspend fun getTestMovie(movie_type: String, type: String): List<MoviesEntity>
+
 
     @Query("DELETE FROM movie_table WHERE movie_type = :movie_type AND type = :type")
     suspend fun deleteAllMovies(movie_type: String, type: String?)

@@ -16,6 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.paultorres.movies.R
 import com.paultorres.movies.model.local.MoviesEntity
 import com.paultorres.movies.databinding.FragmentSearchSerieBinding
+import com.paultorres.movies.util.SERIE_TYPE
 import com.paultorres.movies.viewmodel.Adapter.MovieAdapter
 import com.paultorres.movies.viewmodel.SearchSerieViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -92,7 +93,7 @@ class SearchSerieFragment : Fragment(R.layout.fragment_search_serie) {
 
 
     private fun onItemSelected(it: MoviesEntity) {
-        val action = SearchSerieFragmentDirections.actionNavSearchserieToNavDetails("tv", it.id)
+        val action = SearchSerieFragmentDirections.actionNavSearchserieToNavDetails(SERIE_TYPE, it.id)
         findNavController().navigate(action)
     }
 
