@@ -21,5 +21,4 @@ interface MoviesAPIInterface {
         @Query("query") query: String?,
         @Query("page") pag: Int
     ): MoviesResponse
-
 }
