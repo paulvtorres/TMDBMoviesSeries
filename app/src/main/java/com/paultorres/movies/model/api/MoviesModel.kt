@@ -7,7 +7,6 @@ import kotlinx.parcelize.Parcelize
 
 
 data class MoviesModel(
-
     val id: Int,
     val overview: String?,
     val poster_path: String,

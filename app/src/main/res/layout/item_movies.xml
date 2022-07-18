@@ -8,7 +8,8 @@
     <ImageView
         android:id="@+id/iv_movie_img"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:contentDescription="@null"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -27,8 +28,4 @@
         android:maxLines="1"
         android:textColor="#FFF"
         tools:text="Title Movie"/>
-
-
-
-
 </RelativeLayout>
